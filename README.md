@@ -14,3 +14,7 @@ Am passing the BucketName and the Account Id to the custom resource lambda funct
 
 Custom resource will trigger and delete the layer once i’ll receive the Request Type is delete from CFT.
 
+You can read further on this on my blog
+
+[https://medium.com/@shashavalijetty/automate-the-deletion-of-non-empty-s3-bucket-created-using-cloudformation-by-deleting-its-access-3f575a539d4e](url)
+
