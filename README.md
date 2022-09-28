@@ -4,12 +4,13 @@ If you create the versioning enabled s3 bucket using cloud formation. After that
 
 For deleting it you must have to empty the bucket manually and delete its access points which are created manually.
 
+
 Custom Resources
 
 Custom resources enable you to write custom provisioning logic in templates that AWS CloudFormation runs anytime you create, update (if you change the custom resource), or delete stacks. For example, you might want to include resources that aren’t available as AWS CloudFormation resource types. You can include those resources by using custom resources. That way you can still manage all your related resources in a single stack.
 
 
-Validation
-After creating the template i uploaded the file sample.txt to the bucket you can see the version of that file as well
+Am passing the BucketName and the Account Id to the custom resource lambda function which I created during the stack creation time. Lambda will take these inputs and delete the bucket contents and associated access points.
 
-You can read further information on Custom Resource.
+Custom resource will trigger and delete the layer once i’ll receive the Request Type is delete from CFT.
+
